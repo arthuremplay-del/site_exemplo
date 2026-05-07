@@ -103,14 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         target.style.top = `${y}px`;
         
         gameContainer.appendChild(target);
-        
-        // Animate floating
-        setTimeout(() => {
-            const moveX = (Math.random() - 0.5) * 150;
-            const moveY = (Math.random() - 0.5) * 150;
-            target.style.transform = `translate(${moveX}px, ${moveY}px) scale(1)`;
-            target.style.transition = 'transform 4s ease-in-out';
-        }, 50);
+        console.log("Alien spawned!"); // Debug log
         
         // Remove target after a few seconds if not shot
         const timeoutId = setTimeout(() => {
